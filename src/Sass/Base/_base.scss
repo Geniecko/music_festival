@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    background-color: $page-color;
     font-size: 1.6rem;
     font-family: $primary-font, sans-serif;
     font-weight: fontWeight('light');

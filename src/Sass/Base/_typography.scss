@@ -1,3 +1,90 @@
+p{
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    color: $font-dark-color;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    &.paragraph-light{
+        color: $font-light-color;
+    }
+
+    &.paragraph-gray{
+        color: $font-gray-color;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: fontWeight('bold');
+    color: $font-dark-color;
+
+    &.headline-light{
+        color:$font-light-color;
+    }
+
+    &.headline-nospace{
+        margin-bottom: 0;
+    }
+}
+
 h1{
-    color: $font-gray-color;
+    font-size: 3.8rem;
+    margin-bottom: 24px;
+
+    @include media-up(lg){
+        font-size: 4.2rem;
+    }
+}
+
+h2{
+    font-size: 2.8rem;
+    margin-bottom: 24px;
+
+    @include media-up(lg){
+        font-size: 3.2rem;
+    }
+}
+
+
+h3{
+    font-size: 2.4rem;
+    margin-bottom: 24px;
+
+    @include media-up(lg){
+        font-size: 2.8rem;
+    }
+}
+
+
+h4{
+    font-size: 2rem;
+    margin-bottom: 16px;
+
+    @include media-up(lg){
+        font-size: 2.4rem;
+    }
+}
+
+
+h5{
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+
+    @include media-up(lg){
+        font-size: 2rem;
+    }
+}
+
+
+h6{
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+
+    @include media-up(lg){
+        font-size: 1.8rem;
+    }
 }
