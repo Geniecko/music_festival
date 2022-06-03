@@ -1,0 +1,107 @@
+.navigation {
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+
+    &__wrapper{
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        min-height: 60px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        @include media-up('lg') {
+            min-height: 80px;
+        }
+    }
+
+    &__list {
+        @extend %reset-list-styles;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__link {
+        letter-spacing: 1px;
+        color: $font-light-color;
+        font-weight: fontWeight('bold');
+        font-size: 1.6rem;
+        position: relative;
+
+        span {
+            display: block;
+            padding: 10px 16px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            width: 0;
+            height: 1px;
+            position: absolute;
+            transition: all 0.2s linear;
+            background: $white;
+        }
+
+        span::before,
+        span::after {
+            content: "";
+            width: 1px;
+            height: 0;
+            position: absolute;
+            transition: all 0.15s linear;
+            background: $white;
+        }
+
+        &:hover::before,
+        &:hover::after {
+            width: 100%;
+        }
+
+        &:hover span::before,
+        &:hover span::after {
+            height: 100%;
+        }
+
+        &::after {
+            right: 0;
+            bottom: 0;
+            transition-duration: 0.3s;
+        }
+
+        & span::after {
+            right: 0;
+            bottom: 0;
+            transition-duration: 0.3s;
+        }
+
+        &::before {
+            left: 0;
+            top: 0;
+            transition-duration: 0.3s;
+        }
+
+        & span::before {
+            left: 0;
+            top: 0;
+            transition-duration: 0.3s;
+        }
+    }
+
+    &__social-wrapper{
+        border-left: 2px solid $white;
+        margin-left: 34px;
+        padding-left: 34px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        img{
+            filter: brightness(0) invert(1);
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

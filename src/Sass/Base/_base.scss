@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -7,4 +11,38 @@ body {
     font-size: 1.6rem;
     font-family: $primary-font, sans-serif;
     font-weight: fontWeight('light');
+    min-height: 2000px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    max-width: 1400px;
+
+    @include media-up('md') {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include media-up('xl') {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $font-dark-color;
+
+    &.link {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }

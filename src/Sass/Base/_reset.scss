@@ -122,6 +122,11 @@ q {
     quotes: none;
 }
 
+img{
+    display: block;
+    width: 100%;
+}
+
 blockquote {
 
     &:before,

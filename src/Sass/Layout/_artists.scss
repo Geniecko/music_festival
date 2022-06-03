@@ -1,0 +1,13 @@
+.section-artists{
+    background-color: $secondary-color;
+    padding-top: $section-space;
+    padding-bottom: $section-space;
+}
+
+.artists{
+    &__header{
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,155 @@
+$equalizer-height: 60px;
+
+.equalizer {
+    &__item {
+        display: inline-block;
+        background: transparent;
+        width: 6px;
+        margin-right: 6px;
+        transition: .5s;
+        animation: equalize 4s 0s infinite;
+        animation-timing-function: linear;
+        vertical-align: top;
+        background-color: $white;
+
+
+        &:nth-child(5n+1) {
+            height: $equalizer-height - 25px;
+            transition: 0.5s;
+            animation-delay: -1.9s;
+        }
+
+        &:nth-child(5n+2) {
+            height: $equalizer-height;
+            animation-delay: -2.9s;
+        }
+
+        &:nth-child(5n+3) {
+            height: $equalizer-height - 35px;
+            animation-delay: -3.9s;
+            transition: 0.5s;
+        }
+
+        &:nth-child(5n+4) {
+            height: $equalizer-height - 10px;
+            animation-delay: -1.5s;
+        }
+
+        &:nth-child(5n+5) {
+            height: $equalizer-height - 12px;
+            animation-delay: -3.9s;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+@keyframes equalize {
+    0% {
+        height: $equalizer-height;
+    }
+
+    4% {
+        height: $equalizer-height - 8px;
+    }
+
+    8% {
+        height: $equalizer-height - 10px;
+    }
+
+    12% {
+        height: $equalizer-height - 20px;
+    }
+
+    16% {
+        height: $equalizer-height - 30px;
+    }
+
+    20% {
+        height: $equalizer-height - 20px;
+    }
+
+    24% {
+        height: $equalizer-height - 15px;
+    }
+
+    28% {
+        height: $equalizer-height - 50px;
+    }
+
+    32% {
+        height: $equalizer-height - 15px;
+    }
+
+    36% {
+        height: $equalizer-height;
+    }
+
+    40% {
+        height: $equalizer-height - 35px;
+    }
+
+    44% {
+        height: $equalizer-height - 20px;
+    }
+
+    48% {
+        height: $equalizer-height;
+    }
+
+    52% {
+        height: $equalizer-height - 30px;
+    }
+
+    56% {
+        height: $equalizer-height - 50px;
+    }
+
+    60% {
+        height: $equalizer-height - 20px;
+    }
+
+    64% {
+        height: $equalizer-height;
+    }
+
+    68% {
+        height: $equalizer-height - 30px;
+    }
+
+    72% {
+        height: $equalizer-height;
+    }
+
+    76% {
+        height: $equalizer-height - 40px;
+    }
+
+    80% {
+        height: $equalizer-height;
+    }
+
+    84% {
+        height: $equalizer-height - 15px;
+    }
+
+    88% {
+        height: $equalizer-height;
+    }
+
+    92% {
+        height: $equalizer-height - 40px;
+    }
+
+    96% {
+        height: $equalizer-height;
+    }
+
+    100% {
+        height: $equalizer-height;
+    }
+}
