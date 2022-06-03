@@ -1,13 +1,103 @@
-.section-artists{
+.section-artists {
     background-color: $secondary-color;
     padding-top: $section-space;
     padding-bottom: $section-space;
 }
 
-.artists{
-    &__header{
+.artists {
+    &__header {
         margin: 0 auto;
         max-width: 600px;
         text-align: center;
+    }
+
+    &__items {
+        margin-top: 36px;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: 1fr;
+
+        @include media-up('sm') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-up('xl') {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__link {
+        &:hover {
+            .item__image-wrapper img {
+                transform: scale(1.05);
+            }
+
+            .item__button span {
+                width: 100px;
+                opacity: 1;
+            }
+        }
+    }
+
+    .item {
+        &__image-wrapper {
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+            margin-bottom: 24px;
+            @include aspect-ratio-img(4, 3);
+
+            img{
+                transition: transform .3s ease-in-out;
+            }
+        }
+
+        &__header {
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        &__date {
+            color: $font-gray-color;
+            font-size: 1.4rem;
+            font-weight: fontWeight('bold');
+        }
+
+        &__description {
+            margin-bottom: 24px;
+        }
+
+        &__button {
+            @extend %reset-button;
+            display: flex;
+            align-items: center;
+
+            span {
+                display: block;
+                overflow: hidden;
+                color: $font-light-color;
+                font-weight: fontWeight('bold');
+                text-align: left;
+                white-space: nowrap;
+                width: 0;
+                opacity: 0;
+                font-size: 1.4rem;
+                transition: width .3s ease-in-out, opacity .3s .15s ease-in ;
+            }
+
+            img {
+                width: 20px;
+                height: 10px;
+            }
+        }
+    }
+
+    &__show-more{
+        display: flex;
+        justify-content: center;
+        margin-top: 36px;
     }
 }
