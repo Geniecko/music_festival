@@ -1,9 +1,10 @@
-.section-location{
+.section-sign-up{
+    background-color: $secondary-color;
     padding-top: $section-space;
     padding-bottom: $section-space;
 }
 
-.location{
+.sign-up{
     &__header {
         margin: 0 auto;
         max-width: 600px;
@@ -21,20 +22,24 @@
         }
     }
 
-    &__paragraph{
-        flex:1;
-    }
-
-    &__map-wrapper{
+    &__image-wrapper{
         flex: 1;
-        @include aspect-ratio-img(4,3);
+        @include aspect-ratio-img(1,1);
 
-        iframe{
-            position: absolute;
-            top:0;
-            left: 0;
+        img{
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            object-position: 30% 20%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
         }
+    }
+
+    &__form-wrapper{
+        flex: 1;
     }
 }
