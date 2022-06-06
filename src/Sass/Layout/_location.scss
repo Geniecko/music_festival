@@ -1,0 +1,41 @@
+.section-location{
+    padding-top: $section-space;
+    padding-bottom: $section-space;
+}
+
+.location{
+    &__header {
+        margin: 0 auto;
+        max-width: 600px;
+        text-align: center;
+   
+    }
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        margin-top: 36px;
+
+        @include media-up('md'){
+            flex-direction: row;
+        }
+    }
+
+    &__paragraph{
+        flex:1;
+    }
+
+    &__map-wrapper{
+        flex: 1;
+        @include aspect-ratio-img(4,3);
+
+        iframe{
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
