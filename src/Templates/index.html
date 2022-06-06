@@ -8,7 +8,7 @@
     <title>Music Festival</title>
 </head>
 
-<body>
+<body id="top">
     <header class="header">
         <div class="header__image-wrapper">
             <img src="Assets/Images/header_image.jpg" alt="Music Festival">
@@ -18,9 +18,9 @@
             <div class="navigation__wrapper container">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a class="navigation__link" href="#top"><span>START</span></a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#top"><span>ARTIST</span></a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#top"><span>LOCATION</span></a></li>
-                    <li class="navigation__item"><a class="navigation__link" href="#top"><span>SIGN UP</span></a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#artists"><span>ARTIST</span></a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#location"><span>LOCATION</span></a></li>
+                    <li class="navigation__item"><a class="navigation__link" href="#sign-up"><span>SIGN UP</span></a></li>
                 </ul>
                 <div class="navigation__social-wrapper">
                     <a href="https://www.facebook.com/"><img src="Assets/Icons/facebook.svg" alt="Facebook"></a>
@@ -51,6 +51,7 @@
     </header>
     <main>
         <section class="section-artists">
+            <span id="artists" class="anchor"></span>
             <div class="container artists">
                 <div class="artists__header">
                     <h2 class="headline-light">ARTIST</h2>
@@ -88,6 +89,7 @@
             </div>
         </section>
         <section class="section-location">
+            <span id="location" class="anchor"></span>
             <div class="container location">
                 <div class="location__header">
                     <h2>LOCATION</h2>
@@ -114,6 +116,7 @@
             </div>
         </section>
         <section class="section-sign-up">
+            <span id="sign-up" class="anchor"></span>
             <div class="container sign-up">
                 <div class="sign-up__header">
                     <h2 class="headline-light">SIGN UP</h2>
@@ -138,7 +141,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-partners">
+        <section id="partners" class="section-partners">
             <div class="container partners">
                 <div class="partners__header">
                     <h2>PARTNERS</h2>
@@ -151,6 +154,9 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+
+    </footer>
 </body>
 
 </html>
