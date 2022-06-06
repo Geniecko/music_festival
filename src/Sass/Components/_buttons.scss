@@ -12,6 +12,7 @@
     font-weight: fontWeight('bold');
     letter-spacing: 0.5px;
     font-size: 1.6rem;
+    display: inline-block;
     @extend %transition;
 
     &--primary {

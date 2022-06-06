@@ -1,9 +1,10 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 100){
-            document.querySelector('.navigation').classList.add('navigation--scrolled');
-        } else {
-            document.querySelector('.navigation').classList.remove('navigation--scrolled');
-        }
-    })
+import './Components/MobileNavigation';
+
+import {changeNavOnScroll} from './Function/changeNavOnScroll';
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    // Change navigation styles when user scroll down
+   changeNavOnScroll(document.querySelector('.navigation'));
+
 });

@@ -16,6 +16,11 @@
         </div>
         <nav class="navigation">
             <div class="navigation__wrapper container">
+                <button id="navTrigger--open" class="navigation__trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="navigation__list">
                     <li class="navigation__item"><a class="navigation__link" href="#top"><span>START</span></a></li>
                     <li class="navigation__item"><a class="navigation__link" href="#artists"><span>ARTIST</span></a></li>
@@ -27,12 +32,26 @@
                     <a href="https://www.instagram.com/"> <img src="Assets/Icons/instagram.svg" alt="Instagram"></a>
                 </div>
             </div>
+            <div class="mobile-nav">
+                <div class="container">
+                    <button id="navTrigger--close" class="mobile-nav__trigger">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="mobile-nav__list">
+                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#top"><span>START</span></a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#artists"><span>ARTIST</span></a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#location"><span>LOCATION</span></a></li>
+                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#sign-up"><span>SIGN UP</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <div class="header__content container">
             <h1 class="headline-light">Music Festival - KRAKÓW 2022</h1>
             <p class="paragraph-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam est numquam nisi
                 ea, tempora quisquam similique qui ratione doloribus assumenda?</p>
-            <button class="button button--primary">SIGN UP</button>
+            <a href="#sign-up" class="button button--primary">SIGN UP</a>
             <div class="header__equalizer equalizer">
                 <span class="equalizer__item"></span>
                 <span class="equalizer__item"></span>
@@ -127,7 +146,7 @@
                     <div class="sign-up__form-wrapper">
                         <form action="">
                             <div class="input-wrapper">
-                                <input type="text" class="input input--text">
+                                <input type="text" class="input input--text" placeholder="Name">
                             </div>
                         </form>
                     </div>

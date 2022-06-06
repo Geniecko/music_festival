@@ -12,6 +12,10 @@ body {
     font-size: 1.6rem;
     font-family: $primary-font, sans-serif;
     font-weight: fontWeight('light');
+
+    &.disable-scroll{
+        overflow-y: hidden;
+    }
 }
 
 .container {

@@ -1,0 +1,19 @@
+.input{
+    @extend %reset-input;
+    width: 100%;
+    border: 1px solid $white;
+    padding: 16px 24px;
+    color: $font-gray-color;
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+    outline: 0;
+    transition: border-color .3s ease-in-out;
+
+    &::placeholder{
+        color: $font-gray-color;
+    }
+
+    &:focus{
+        border-color: $primary-color;
+    }
+}
