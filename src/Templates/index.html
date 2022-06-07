@@ -11,7 +11,12 @@
 <body id="top">
     <header class="header">
         <div class="header__image-wrapper">
-            <img src="Assets/Images/header_image.jpg" alt="Music Festival">
+            <picture>
+                <source media="(min-width:1400px)" srcset="Assets/Images/header_image_3x.jpg">
+                <source media="(min-width:992px)" srcset="Assets/Images/header_image_2x.jpg">
+                <source media="(min-width:576px)" srcset="Assets/Images/header_image_1.5x.jpg">
+                <img src="Assets/Images/header_image_1x.jpg" alt="">
+            </picture>
             <div class="header__image-overlay"></div>
         </div>
         <nav class="navigation">
@@ -42,13 +47,18 @@
                         <span></span>
                     </button>
                     <ul class="mobile-nav__list">
-                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#top"><span>START</span></a></li>
-                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#artists"><span>ARTIST</span></a>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link" href="#top"><span>START</span></a>
                         </li>
-                        <li class="mobile-nav__item"><a class="mobile-nav__link"
-                                href="#location"><span>LOCATION</span></a></li>
-                        <li class="mobile-nav__item"><a class="mobile-nav__link" href="#sign-up"><span>SIGN
-                                    UP</span></a></li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link" href="#artists"><span>ARTIST</span></a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link" href="#location"><span>LOCATION</span></a>
+                        </li>
+                        <li class="mobile-nav__item">
+                            <a class="mobile-nav__link" href="#sign-up"><span>SIGN UP</span></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -79,7 +89,7 @@
             <span id="artists" class="anchor"></span>
             <div class="container artists">
                 <div class="artists__header">
-                    <h2 class="headline-light">ARTIST</h2>
+                    <h2 class="headline-primary-color">ARTIST</h2>
                     <p class="paragraph-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quasi
                         excepturi natus iusto possimus debitis et vel ipsum pariatur maxime.</p>
                 </div>
@@ -87,7 +97,7 @@
                     <a href="#top" class="artists__link">
                         <div class="artists__item item">
                             <div class="item__image-wrapper">
-                                <img src="Assets/Images/header_image.jpg" alt="Example">
+                                <img src="Assets/Images/header_image_2x.jpg" alt="Example">
                             </div>
                             <div class="item__content">
                                 <div class="item__header">
@@ -145,7 +155,7 @@
             <span id="sign-up" class="anchor"></span>
             <div class="container sign-up">
                 <div class="sign-up__header">
-                    <h2 class="headline-light">SIGN UP</h2>
+                    <h2 class="headline-primary-color">SIGN UP</h2>
                     <p class="paragraph-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quasi
                         excepturi natus iusto possimus debitis et vel ipsum pariatur maxime.</p>
                 </div>
@@ -242,31 +252,32 @@
                         <div class="splide__track">
                             <div class="splide__list">
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/d3.svg" alt="D3">
+                                    <img src="Assets/Logos/d3.svg" alt="D3" loading="lazy">
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/wvem.svg" alt="Wvem">
+                                    <img src="Assets/Logos/wvem.svg" alt="Wvem" loading="lazy">
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/bordet-logo.svg" alt="Bordet">
+                                    <img src="Assets/Logos/bordet-logo.svg" alt="Bordet" loading="lazy">
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/electrolit.svg" alt="electrolit">
-                                </div>         
-                                <div class="splide__slide">
-                                    <img src="Assets/Logos/reshaperc.svg" alt="reshaperc">
+                                    <img src="Assets/Logos/electrolit.svg" alt="electrolit" loading="lazy">
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/colgate-palmolive-logo.svg" alt="colgate-palmolive-logo">
+                                    <img src="Assets/Logos/reshaperc.svg" alt="reshaperc" loading="lazy">
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/deliveroo-1.svg" alt="deliveroo-1">
+                                    <img src="Assets/Logos/colgate-palmolive-logo.svg" alt="colgate-palmolive-logo"
+                                        loading="lazy">
                                 </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/indeed-logo.svg" alt="indeed">
-                                </div>         
+                                    <img src="Assets/Logos/deliveroo-1.svg" alt="deliveroo-1" loading="lazy">
+                                </div>
                                 <div class="splide__slide">
-                                    <img src="Assets/Logos/rolex-logo.svg" alt="rolex">
+                                    <img src="Assets/Logos/indeed-logo.svg" alt="indeed" loading="lazy">
+                                </div>
+                                <div class="splide__slide">
+                                    <img src="Assets/Logos/rolex-logo.svg" alt="rolex" loading="lazy">
                                 </div>
                             </div>
                         </div>
@@ -277,19 +288,24 @@
     <footer class="footer">
         <div class="container footer__wrapper">
             <div class="footer__content">
-                <h2 class="headline-light">Music Festival - KRAKÓW 2022</h2>
+                <h3 class="headline-primary-color">Music Festival - KRAKÓW 2022</h3>
                 <p class="paragraph-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam est numquam
                     nisi
                     ea, tempora quisquam similique qui ratione doloribus assumenda?</p>
             </div>
             <div class="footer__navigation footer-nav">
                 <ul class="footer-nav__list">
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#top"><span>START</span></a></li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#artists"><span>ARTIST</span></a>
+                    <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#top"><span>START</span></a>
                     </li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#location"><span>LOCATION</span></a>
+                    <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#artists"><span>ARTIST</span></a>
                     </li>
-                    <li class="footer-nav__item"><a class="footer-nav__link" href="#sign-up"><span>SIGN UP</span></a>
+                    <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#location"><span>LOCATION</span></a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a class="footer-nav__link" href="#sign-up"><span>SIGN UP</span></a>
                     </li>
                 </ul>
             </div>
