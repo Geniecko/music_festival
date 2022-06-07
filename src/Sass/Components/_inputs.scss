@@ -1,11 +1,30 @@
+.input-wrapper{
+    position: relative;
+
+    label{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 16px;
+        font-size: 1.4rem;
+        background-color: $secondary-color;
+        padding: 4px 8px;
+        color: $font-gray-color;
+        transition: all .3s ease-in-out;
+        letter-spacing: 1px;
+        pointer-events: none;
+    }
+}
+
 .input{
     @extend %reset-input;
     width: 100%;
     border: 1px solid $white;
-    padding: 16px 24px;
-    color: $font-gray-color;
-    letter-spacing: 1px;
+    padding: 16px;
+    color: $font-light-color;
+    letter-spacing: 0.5px;
     font-size: 1.4rem;
+    font-weight: fontWeight('light');
     outline: 0;
     transition: border-color .3s ease-in-out;
 
@@ -13,7 +32,81 @@
         color: $font-gray-color;
     }
 
+    &:hover{
+        border-color: $primary-color;
+    }
+
     &:focus{
         border-color: $primary-color;
+
+        & + label{
+            top: 0;
+            font-size: 1.2rem;
+        }
+    }
+
+    &.has-value{
+        & + label{
+            top: 0;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+// resets
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px $secondary-color inset !important;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: $font-light-color !important;
+}
+
+
+// input checkbox
+.checkbox{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    min-width: 14px;
+    height: 14px;
+    margin: 0;
+    background-color: $white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+
+
+    &::after{
+        transition: opacity .3s ease-in-out;
+        opacity: 0;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        background-color: $secondary-color;
+    }
+
+    &:checked:after{
+        opacity: 1;
+    }
+}
+
+// input radio
+.radio{
+    @extend .checkbox;
+    border-radius: 50%;
+
+    &:after{
+        border-radius: 50%;
     }
 }

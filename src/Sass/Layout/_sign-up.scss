@@ -13,7 +13,7 @@
 
     &__content{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 32px;
         margin-top: 36px;
 
@@ -41,5 +41,50 @@
 
     &__form-wrapper{
         flex: 1;
+
+        .input-wrapper{
+            margin-bottom: 24px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+
+        .radio-wrapper{
+            display: flex;
+            margin-bottom: 8px;
+
+            label{
+                margin-left: 8px;
+                color: $font-gray-color;
+            }
+        }
+
+        .checkbox-wrapper{
+            display: flex;
+            margin-bottom: 24px;
+
+            label{
+                margin-left: 8px;
+                color: $font-gray-color;
+            }
+        }
+        
+        .sign-up-form{
+            fieldset{
+                margin-bottom: 16px;
+            }
+
+            &__text-input-wrapper{
+                &--other{
+                    display: none;
+                    margin-top: 24px;
+
+                    &.show{
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }

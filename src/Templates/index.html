@@ -117,10 +117,10 @@
                 </div>
                 <div class="location__content">
                     <div class="location__map-wrapper">
-                        <iframe
+                        <!-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12271.992475912657!2d19.93093117981932!3d50.06178684086782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b0df90f6453%3A0xbb2e110fa28d685b!2zUnluZWsgR8WCw7N3bnksIEtyYWvDs3c!5e0!3m2!1spl!2spl!4v1654516695435!5m2!1spl!2spl"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                     </div>
                     <div class="location__paragraph">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas quidem at, maxime ad fugit hic
@@ -144,10 +144,59 @@
                 </div>
                 <div class="sign-up__content">
                     <div class="sign-up__form-wrapper">
-                        <form action="">
-                            <div class="input-wrapper">
-                                <input type="text" class="input input--text" placeholder="Name">
+                        <form action="" class="sign-up-form">
+                            <div class="input-wrapper sign-up-form__text-input-wrapper">
+                                <input name="name" type="text" class="input input--text sign-up-form__text-input" required>
+                                <label for="name">Name</label>
                             </div>
+                            <div class="input-wrapper sign-up-form__text-input-wrapper">
+                                <input name="surname" type="text" class="input input--text sign-up-form__text-input">
+                                <label for="surname">Surname</label>
+                            </div>
+                            <div class="input-wrapper sign-up-form__text-input-wrapper">
+                                <input name="email" type="email" class="input input--email sign-up-form__text-input" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <fieldset id="form-about">
+                                <h6 class="headline-light">How do you know about us</h6>
+                                <div class="radio-wrapper">
+                                    <input type="radio" value="Friend" name="form-about" class="radio" id="form-about_friend">
+                                    <label for="form-about_friend">Friend</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input type="radio" value="Internet" class="radio" name="form-about" id="form-about_internet">
+                                    <label for="form-about_internet">Internet</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input type="radio" value="Facebook" class="radio" name="form-about" id="form-about_facebook">
+                                    <label for="form-about_facebook">Facebook</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input type="radio" value="Instagram" class="radio" name="form-about" id="form-about_instagram">
+                                    <label for="form-about_instagram">Instagram</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input type="radio" value="Advertisement" class="radio" name="form-about" id="form-about_add">
+                                    <label for="form-about_add">Advertisement</label>
+                                </div>
+                                <div class="radio-wrapper">
+                                    <input type="radio" value="other" class="radio" name="form-about" id="form-about_other">
+                                    <label for="form-about_other">Other</label>
+                                </div>
+                                <div class="input-wrapper sign-up-form__text-input-wrapper sign-up-form__text-input-wrapper--other">
+                                    <input name="form-about" type="text" class="input input--text sign-up-form__text-input sign-up-form__text-input--other" id="form-about_other--text">
+                                    <label for="form-about_other--text">Other</label>
+                                </div>
+                            </fieldset>
+                            <div class="input-wrapper sign-up-form__text-input-wrapper">
+                                <input name="phone_number" type="tel" class="input input--phone-number sign-up-form__text-input" required>
+                                <label for="phone_number">Phone number</label>
+                            </div>
+                            <div class="checkbox-wrapper sign-up-form__checkbox-wrapper">
+                                <input name="regualtions" id="reg" type="checkbox" class="checkbox sign-up-form__checkbox" required>
+                                <label for="reg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum possimus ducimus itaque nihil saepe quo.</label>
+                            </div>
+                            <button type="submit" class="button button--secondary">SUBMIT</button>
                         </form>
                     </div>
                     <div class="sign-up__image-wrapper">
