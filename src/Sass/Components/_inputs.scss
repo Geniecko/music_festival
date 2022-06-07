@@ -84,8 +84,6 @@ input:-webkit-autofill{
     outline: none;
     cursor: pointer;
     
-
-
     &::after{
         transition: opacity .3s ease-in-out;
         opacity: 0;
@@ -98,6 +96,13 @@ input:-webkit-autofill{
 
     &:checked:after{
         opacity: 1;
+    }
+}
+
+.checkbox-wrapper{
+    label{
+        margin-top: -4px;
+        line-height: 2rem;   
     }
 }
 
