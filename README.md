@@ -5,6 +5,8 @@
 - HTML
 - CSS(SASS & BEM)
 - JavaScript
+- Fetch API
+- SplideJs
 - Webpack
 - Figma
 
