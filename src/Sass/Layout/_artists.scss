@@ -40,15 +40,27 @@
     }
 
     .item {
+        height: 100%;
+        position: relative;
+        
+        &.has-link{
+            padding-bottom: 20px;
+        }
+
         &__image-wrapper {
             border-radius: 8px 8px 0 0;
             overflow: hidden;
             margin-bottom: 24px;
             @include aspect-ratio-img(4, 3);
 
-            img{
+            img {
                 transition: transform .3s ease-in-out;
             }
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
         }
 
         &__header {
@@ -66,14 +78,12 @@
             font-weight: fontWeight('bold');
         }
 
-        &__description {
-            margin-bottom: 24px;
-        }
-
         &__button {
             @extend %reset-button;
             display: flex;
             align-items: center;
+            position: absolute;
+            bottom: 0;
 
             span {
                 display: block;
@@ -85,7 +95,7 @@
                 width: 0;
                 opacity: 0;
                 font-size: 1.4rem;
-                transition: width .3s ease-in-out, opacity .3s .15s ease-in ;
+                transition: width .3s ease-in-out, opacity .3s .15s ease-in;
             }
 
             img {
@@ -95,7 +105,7 @@
         }
     }
 
-    &__show-more{
+    &__show-more {
         display: flex;
         justify-content: center;
         margin-top: 36px;

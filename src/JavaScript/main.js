@@ -2,6 +2,7 @@ import './Components/InformationSiteModal';
 import './Components/MobileNavigation';
 import './Components/InputPlaceholder';
 import './Components/SplideInit';
+import './Components/ShowArtists';
 
 import {changeNavOnScroll} from './Function/changeNavOnScroll';
 

@@ -1,6 +1,8 @@
+const modal = document.querySelector('.modal');
+
 function closeInfoModal() {
     document.body.classList.remove('disable-scroll');
-    document.querySelector('.modal').remove();
+    modal.remove();
 }
 
 function infoModalInit() {
@@ -11,5 +13,8 @@ function infoModalInit() {
     });
 }
 
-infoModalInit();
+if(modal){
+    infoModalInit();
+}
+
 
